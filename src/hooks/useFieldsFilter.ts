@@ -13,11 +13,8 @@ const useFieldsFilter = () => {
 
   const getFields = useCallback(async () => {
     try {
-      console.log("c1");
       const productResponse: string[] | null = await callAPI("get_fields", { field: "product" });
-      console.log("c2");
       const priceResponse: number[] | null = await callAPI("get_fields", { field: "price" });
-      console.log("c3");
       const brandResponse: string[] | null = await callAPI("get_fields", { field: "brand" });
 
       const product = productResponse ? productResponse.filter((item) => item !== null) : [];
