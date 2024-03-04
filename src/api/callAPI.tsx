@@ -22,9 +22,9 @@ async function callAPI(action: string, params = {}) {
     return response.data.result;
   } catch (error) {
      if (error instanceof Error) {
-       console.error("Error calling API:", error.message);
+       console.error("Error calling API 1:", error.message);
      } else {
-       console.error("Error calling API:", error);
+       console.error("Error calling API 2:", error);
      }
     return await callAPI(action, params);
   }
