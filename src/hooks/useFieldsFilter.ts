@@ -40,8 +40,7 @@ const useFieldsFilter = () => {
   }, []);
 
   useEffect(() => {
-    // getFields();
-    console.log("render");
+    getFields();
   }, [getFields]);
 
   return {
