@@ -8,7 +8,7 @@ async function callAPI(action: string, params = {}) {
   const authString = md5(`${PASSWORD}_${timestamp}`);
 
   const headers = {
-    "method": 'POST',
+    method: "POST",
     "Content-Type": "application/json",
     "X-Auth": authString,
   };
@@ -21,7 +21,11 @@ async function callAPI(action: string, params = {}) {
     const response = await axios.post(URL, { action, params }, options);
     return response.data.result;
   } catch (error) {
-    console.error("Error calling API:", error);
+     if (error instanceof Error) {
+       console.error("Error calling API:", error.message);
+     } else {
+       console.error("Error calling API:", error);
+     }
     return await callAPI(action, params);
   }
 }

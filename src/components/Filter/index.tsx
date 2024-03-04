@@ -22,18 +22,16 @@ const Filter = ({ options, name, placeholder, onSelect }: FilterProps) => {
   };
 
   return (
-    <>
-      <Select
-        className="basic-single max-w-[300px] w-full"
-        instanceId={name}
-        inputId={name}
-        name={name}
-        options={options}
-        isClearable={true}
-        placeholder={placeholder}
-        onChange={handleChange}
-      />
-    </>
+    <Select
+      className="basic-single max-w-[300px] w-full"
+      instanceId={name}
+      inputId={name}
+      name={name}
+      options={options}
+      isClearable={true}
+      placeholder={placeholder}
+      onChange={handleChange}
+    />
   );
 };
 

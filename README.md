@@ -1,8 +1,8 @@
-# Тестовое задание в компанию TVOЁ
+# Тестовое задание в компанию Валантис
 ## Позиция Frontend developer
 
 ### Задание
-Используя предоставленный апи создать страницу, которая отображает список товаров.  
+Используя предоставленный API создать страницу, которая отображает список товаров.  
 Для каждого товара должен отображаться его id, название, цена и бренд.
 
 ### Требования:
@@ -60,7 +60,7 @@ API доступно по адресам:
 #### [Deploy задания](https://test-tvoe-live.vercel.app/ "Deploy задания")
 
 ### Результат задания:
-##### Отфильтрованая по цене и бренду:
+##### Отфильтрованая страница по цене и бренду:
 [![My cv](https://github.com/BANDITOS86/my-img/blob/main/valantis-filtered-price-and-brand.png?raw=true)](https://test-tvoe-live.vercel.app/)
-##### Главна: 
+##### Главная: 
 [![My cv](https://github.com/BANDITOS86/my-img/blob/main/valantis-home.png?raw=true)](https://test-tvoe-live.vercel.app/)
