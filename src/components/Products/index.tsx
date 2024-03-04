@@ -17,24 +17,26 @@ export interface Product {
   brand: string;
 }
 
-function Products() {
-  
+const Products = () => {
   const [filterApplied, setFilterApplied] = useState(false);
   const [page, setPage] = useState(1);
   const perPage = 50;
+
   const {
     products: allProducts,
     loading: productsLoading,
     paginatedLength: paginationAllProducts,
   } = useProducts({filterApplied, page, perPage});
+
   const {
     filteredProducts,
     loading: filterProductsLoading,
     paginatedLength: paginationFilteredProduct,
     handleFilterSelect,
   } = useFilteredProducts({ filterApplied, page, perPage, setFilterApplied, setPage });
-  const { productSet, priceSet, brandSet } = useFieldsFilter();
 
+  const { productSet, priceSet, brandSet } = useFieldsFilter();
+  
   const totalPaginatedLength = filterApplied ? paginationFilteredProduct : paginationAllProducts;
   const products = filterApplied ? filteredProducts : allProducts;
   const isLoading = productsLoading || filterProductsLoading;
