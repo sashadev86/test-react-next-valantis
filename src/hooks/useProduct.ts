@@ -35,6 +35,7 @@ const useProducts = ({ filterApplied, page, perPage }: UseProductsProps) => {
   useEffect(() => {
     if (!filterApplied) {
       fetchData();
+      console.log("fetchdata");
     }
   }, [fetchData, filterApplied, paginatedLength]);
 
