@@ -33,10 +33,9 @@ function Products() {
     paginatedLength: paginationFilteredProduct,
     handleFilterSelect,
   } = useFilteredProducts({ filterApplied, page, perPage, setFilterApplied, setPage });
-  const { productSet, priceSet, brandSet } = useFieldsFilter({ filterApplied });
+  const { productSet, priceSet, brandSet } = useFieldsFilter();
 
   const totalPaginatedLength = filterApplied ? paginationFilteredProduct : paginationAllProducts;
-  const showPagination = totalPaginatedLength > perPage;
   const products = filterApplied ? filteredProducts : allProducts;
   const isLoading = productsLoading || filterProductsLoading;
 
@@ -66,7 +65,7 @@ function Products() {
 
       {isLoading ? <Loader /> : productsList}
 
-      {!isLoading && showPagination && (
+      {!isLoading && (
         <Pagination page={page} setPage={setPage} perPage={perPage} paginatedLength={totalPaginatedLength} />
       )}
     </div>

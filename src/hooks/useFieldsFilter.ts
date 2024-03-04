@@ -1,16 +1,12 @@
 import { callAPI } from "@/api/callAPI";
 import { useCallback, useEffect, useState } from "react";
 
-interface UseFieldsFilterProps {
-  filterApplied: boolean;
-}
-
 interface Option {
   value: string;
   label: string;
 }
 
-const useFieldsFilter = ({ filterApplied }: UseFieldsFilterProps) => {
+const useFieldsFilter = () => {
   const [productSet, setProductSet] = useState<Option[]>([]);
   const [priceSet, setPriceSet] = useState<Option[]>([]);
   const [brandSet, setBrandSet] = useState<Option[]>([]);
@@ -41,10 +37,8 @@ const useFieldsFilter = ({ filterApplied }: UseFieldsFilterProps) => {
   }, []);
 
   useEffect(() => {
-    if (!filterApplied) {
-      fields();
-    }
-  }, [fields, filterApplied]);
+    fields();
+  }, [fields]);
 
   return {
     productSet,

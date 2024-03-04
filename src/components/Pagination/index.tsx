@@ -30,6 +30,8 @@ const Pagination = ({page, setPage, perPage, paginatedLength}: PaginationProps) 
     setPage(totalPages);
   };
 
+  if(paginatedLength < perPage) return null;
+  
   return (
     <div className={"w-full flex items-center justify-center gap-[5px]"}>
       {page !== 1 && (

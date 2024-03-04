@@ -52,7 +52,7 @@ const useFilteredProducts = ({filterApplied, page, perPage, setFilterApplied, se
     }
   }, [page, perPage, productInputValue, priceInputValue, brandInputValue]);
 
-  const handleFilterSelect = (value: string, inputName: string) => {
+  const handleFilterSelect = useCallback((value: string, inputName: string) => {
     setFilterApplied(true);
     setPage(1);
 
@@ -78,7 +78,7 @@ const useFilteredProducts = ({filterApplied, page, perPage, setFilterApplied, se
         }
       }
     }
-  };
+  }, [setFilterApplied, setPage, priceInputValue, brandInputValue, productInputValue]);
 
   useEffect(() => {
     if (filterApplied) {
