@@ -18,7 +18,7 @@ const useFilteredProducts = ({filterApplied, page, perPage, setFilterApplied, se
   const [brandInputValue, setBrandInputValue] = useState("");
   const [paginatedLength, setPaginatedLength] = useState<number>(0);
 
-  const filtered = useCallback(async () => {
+  const filterProducts = useCallback(async () => {
     try {
       setLoading(true);
       const filterParams = { offset: (page - 1) * perPage, limit: perPage };
@@ -82,9 +82,9 @@ const useFilteredProducts = ({filterApplied, page, perPage, setFilterApplied, se
 
   useEffect(() => {
     if (filterApplied) {
-      filtered();
+      filterProducts();
     }
-  }, [filterApplied, filtered])
+  }, [filterApplied, filterProducts]);
 
   return {
     filteredProducts,
