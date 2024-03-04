@@ -25,25 +25,25 @@ const useFilteredProducts = ({filterApplied, page, perPage, setFilterApplied, se
       let combinedFilterIds: string[] = [];
 
       if (productInputValue !== "") {
-        console.log(1);
+        console.log("b1");
         const filterIds = await callAPI("filter", { product: productInputValue, ...filterParams });
         combinedFilterIds = [...combinedFilterIds, ...filterIds];
       }
 
       if (priceInputValue !== "") {
-        console.log(2);
+        console.log("b2");
         const filterIds = await callAPI("filter", { price: parseFloat(priceInputValue), ...filterParams });
         combinedFilterIds = [...combinedFilterIds, ...filterIds];
       }
 
       if (brandInputValue !== "") {
-        console.log(3);
+        console.log("b3");
         const filterIds = await callAPI("filter", { brand: brandInputValue, ...filterParams });
         combinedFilterIds = [...combinedFilterIds, ...filterIds];
       }
 
       const uniqueFilterIds: string[] = Array.from(new Set(combinedFilterIds));
-      console.log(4);
+      console.log("b4");
       const filterItems = await callAPI("get_items", { ids: uniqueFilterIds });
       setPaginatedLength(filterItems.length);
       const paginatedIds = filterItems.slice((page - 1) * perPage, page * perPage);
