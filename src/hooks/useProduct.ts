@@ -16,10 +16,12 @@ const useProducts = ({ filterApplied, page, perPage }: UseProductsProps) => {
   const fetchData = useCallback(async () => {
     try {
       setLoading(true);
+      console.log(1);
       const ids = await callAPI("get_ids");
       const uniqueIds = Array.from(new Set(ids));
       setPaginatedLength(uniqueIds.length);
       const paginatedIds = uniqueIds.slice((page - 1) * perPage, page * perPage);
+      console.log(2);
       const items = await callAPI("get_items", { ids: paginatedIds });
       const uniqueItems = Array.from(new Set(items.map((item: Product) => item.id))).map((id) =>
         items.find((item: Product) => item.id === id)
