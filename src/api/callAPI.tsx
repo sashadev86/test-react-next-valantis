@@ -21,11 +21,10 @@ async function callAPI(action: string, params = {}) {
     const response = await axios.post(URL, { action, params }, options);
     return response.data.result;
   } catch (error) {
-      console.log(action, params);
      if (error instanceof Error) {
-       console.error("Error calling API 1:", error.message);
+       console.error("Error calling API:", error.message);
      } else {
-       console.error("Error calling API 2:", error);
+       console.error("Error calling API:", error);
      }
     return await callAPI(action, params);
   }
