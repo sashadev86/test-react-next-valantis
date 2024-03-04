@@ -11,7 +11,7 @@ const useFieldsFilter = () => {
   const [priceSet, setPriceSet] = useState<Option[]>([]);
   const [brandSet, setBrandSet] = useState<Option[]>([]);
 
-  const fields = useCallback(async () => {
+  const getFields = useCallback(async () => {
     try {
       console.log("c1");
       const productResponse: string[] | null = await callAPI("get_fields", { field: "product" });
@@ -40,8 +40,9 @@ const useFieldsFilter = () => {
   }, []);
 
   useEffect(() => {
-    fields();
-  }, [fields]);
+    // getFields();
+    console.log("render");
+  }, [getFields]);
 
   return {
     productSet,
