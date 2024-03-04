@@ -57,10 +57,10 @@ API доступно по адресам:
 ```
 
 ### Deploy задания:
-#### [Deploy задания](https://test-tvoe-live.vercel.app/ "Deploy задания")
+#### [Deploy задания](https://test-react-next-valantis.vercel.app/ "Deploy задания")
 
 ### Результат задания:
 ##### Отфильтрованая страница по цене и бренду:
-[![My cv](https://github.com/BANDITOS86/my-img/blob/main/valantis-filtered-price-and-brand.png?raw=true)](https://test-tvoe-live.vercel.app/)
+[![My cv](https://github.com/BANDITOS86/my-img/blob/main/valantis-filtered-price-and-brand.png?raw=true)](https://test-react-next-valantis.vercel.app/)
 ##### Главная: 
-[![My cv](https://github.com/BANDITOS86/my-img/blob/main/valantis-home.png?raw=true)](https://test-tvoe-live.vercel.app/)
+[![My cv](https://github.com/BANDITOS86/my-img/blob/main/valantis-home.png?raw=true)](https://test-react-next-valantis.vercel.app/)
