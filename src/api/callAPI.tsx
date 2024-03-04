@@ -3,7 +3,7 @@ import md5 from "md5";
 
 async function callAPI(action: string, params = {}) {
   const PASSWORD = "Valantis";
-  const URL = `http://api.valantis.store:40000/`;
+  const URL = `https://api.valantis.store:41000/`;
   const timestamp = new Date().toISOString().split("T")[0].replace(/-/g, "");
   const authString = md5(`${PASSWORD}_${timestamp}`);
 
