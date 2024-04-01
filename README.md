@@ -36,7 +36,7 @@ API доступно по адресам:
 ### Демонстрация:
 1. Клонируйте репазиторий:
 ```
- https://github.com/BANDITOS86/test-react-next-valantis/tree/dev
+ https://github.com/sashadev86/test-react-next-valantis/tree/dev
 ```
 
 2. Для подтягивания необходимых библиотек и зависимостей, в консоли выполните команду:
@@ -61,6 +61,6 @@ API доступно по адресам:
 
 ### Результат задания:
 ##### Отфильтрованая страница по цене и бренду:
-[![My cv](https://github.com/BANDITOS86/my-img/blob/main/valantis-filtered-price-and-brand.png?raw=true)](https://test-react-next-valantis.vercel.app/)
+[![My cv](https://github.com/sashadev86/my-img/blob/main/valantis-filtered-price-and-brand.png?raw=true)](https://test-react-next-valantis.vercel.app/)
 ##### Главная: 
-[![My cv](https://github.com/BANDITOS86/my-img/blob/main/valantis-home.png?raw=true)](https://test-react-next-valantis.vercel.app/)
+[![My cv](https://github.com/sashadev86/my-img/blob/main/valantis-home.png?raw=true)](https://test-react-next-valantis.vercel.app/)
